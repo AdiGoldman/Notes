@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "target": "ES6",
+        "module": "CommonJS",
+        "outDir": "Notes App/public/out",
+        "sourceMap": true,
+        
+    }
+}

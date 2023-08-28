@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <title>Notes</title>
+</head>
+
+<body>
+    <h1 class="myNotes">My Notes</h1>
+    <div class="popup-box">
+        <div class="popup">
+            <div class="content">
+                <header>
+                    <p>Add a new note</p>
+                    <i class="uil uil-times"></i>
+                </header>
+                <form action="#">
+                    <div class="row title">
+                        <label for="">Title</label>
+                        <input type="text" maxlength="15">
+                    </div>
+                    <div class="row description">
+                        <label for="">Description</label>
+                        <textarea maxlength="236"></textarea>
+                    </div>
+                    <select id="note-background">
+                        <option value="default" style="background-color:rgb(240, 207, 151)">Choose Background color
+                        </option>
+                        <option value="bg1.jpg" style="background-color: rgb(185, 250, 234)">Light Green</option>
+                        <option value="bg2.jpg" style="background-color:rgb(168, 109, 170)">Purple</option>
+                        <option value="bg3.jpg" style="background-color:rgb(222, 220, 138)">Yellow</option>
+                        <option value="bg4.jpg" style="background-color:rgb(216, 145, 196)">Pink</option>
+                        <option value="bg5.jpg" style="background-color:rgb(27, 204, 232)">blue</option>
+                        <option value="bg6.jpg" style="background-color: rgb(225, 100, 100);">Red</option>
+                    </select>
+                    <button>Add Note</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="searchAndSort">
+    <input type="text" id="search-input" placeholder="   Search note">
+    <select id="sort-select">
+        <option value="sort">Sort by</option>
+        <option value="alphabetical" onclick="sortNotesAlphabetically()">Sort Alphabetically</option>
+        <option value="date">Date</option>
+    </select>
+    </div>
+    <div class="wrapper">
+        <li class="add-box">
+            <div class="icon">
+                <i class="uil uil-file-plus-alt"></i>
+            </div>
+        </li>
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500&display=swap');
+
+:root {
+    --primaryColor: rgb(66, 79, 83);
+    --secondarycolor: rgb(255, 255, 255);
+    --primaryText: #000000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fredoka', sans-serif;
+
+}
+
+body {
+    background: var(--primaryColor);
+}
+
+.wrapper {
+    margin: 50px;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fill, 265px);
+}
+
+.wrapper li {
+    height: 250px;
+    list-style: none;
+    background: var(--secondarycolor);
+    border-radius: 5px;
+    padding: 15px 20px 20px;
+}
+
+.add-box,
+.icon,
+.bottom-content,
+.popup,
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.add-box {
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.add-box .icon {
+    height: 88px;
+    width: 88px;
+    font-size: 60px;
+    justify-content: center;
+    color: var(--primaryColor);
+}
+
+.add-box p {
+    color: var(--primaryText);
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+.wrapper .note {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.note p {
+    font-size: 26px;
+    font-weight: 500;
+    color: black;
+    word-wrap: break-word;
+}
+
+.note span {
+    display: block;
+    margin-top: 5px;
+    color: var(--primaryText);
+    font-size: 15px;
+    word-wrap: break-word;
+}
+
+.bottom-content span {
+    color: var(--primaryText);
+    font-size: 14px;
+}
+
+.bottom-content .settings i {
+    color: var(--primaryText);
+    font-size: 15px;
+    cursor: pointer !important;
+    padding: 0 10px;
+}
+
+.popup-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 2;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.popup-box .popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    max-width: 400px;
+    width: 100%;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+}
+
+.popup-box,
+.popup-box .popup {
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.25s ease;
+    z-index: -1;
+}
+
+.popup-box.show,
+.popup-box .popup {
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 3;
+}
+
+.popup .content {
+    width: calc(100% - 15px);
+    border-radius: 5px;
+    background: #fff;
+}
+
+.popup .content header {
+    padding: 15px 25px;
+    border-bottom: 1px solid #ccc;
+}
+
+.content header p {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.content header i {
+    color: #000000;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.content form {
+    margin: 15px 25px 35px;
+}
+
+.content form .row {
+    margin-bottom: 20px;
+}
+
+form .row label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+
+.content form :where(input, textarea) {
+    width: 100%;
+    height: 50px;
+    outline: none;
+    font-size: 17px;
+    padding: 0 15px;
+    border-radius: 4px;
+    border: 1px solid #000000;
+}
+
+
+.content form textarea {
+    height: 150px;
+    padding: 8px 15px;
+    resize: none;
+}
+
+.content form button {
+    width: 100%;
+    height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 17px;
+    background: var(--primaryColor);
+}
+
+.myNotes {
+    color: rgb(250, 250, 250);
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding-top: 20px;
+    font-size: 80px;
+    font-family: 'Fredoka', sans-serif;
+
+}
+
+.note {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 10px;
+    border-top: #000000;
+}
+
+.note.bg-default {
+    background-color: rgb(255, 255, 255);
+}
+
+.note.bg-bg1 {
+    background-color: rgb(185, 250, 234);
+}
+
+.note.bg-bg2 {
+    background-color: rgb(168, 109, 170);
+}
+
+.note.bg-bg3 {
+    background-color: rgb(222, 220, 138);
+}
+
+.note.bg-bg4 {
+    background-color: rgb(216, 145, 196);
+}
+
+.note.bg-bg5 {
+    background-color: rgb(27, 204, 232);
+}
+
+.note.bg-bg6 {
+    background-color: rgb(225, 100, 100);
+}
+
+#search-input {
+    height: 40px;
+    width: 270px;
+    font-size: 18px;
+    display: flex;
+    margin-left: 50px;
+    color: #000000;
+    border-radius: 15px;
+}
+
+.searchAndSort{
+    height: 40px;
+    width: 270px;
+    font-size: 18px;
+    display: flex;
+    margin-top: 20px;
+}
+
+
+#sort-select{
+    height: 40px;
+    width: 270px;
+    font-size: 18px;
+    display: flex;
+    color: #000000;
+    border-radius: 15px;
+
+}
